@@ -1,0 +1,730 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>IT Monkey Life</title>
+	<meta name="author" content="Rick">
+
+	
+	<meta name="description" content="Jun 20th, 2014 iOS Comments 使用VIPER构建iOS应用 var wumiiPermaLink = ""; //请用代码生成文章永久的链接 var wumiiTitle = ""; //请用代码生成文章标题 var wumiiTags = ""; // &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/Blog/atom.xml" rel="alternate" title="IT Monkey Life" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://ITMonkeyLife.github.io/Blog/blog/page/2/">
+	<link href="/Blog/favicon.png" rel="shortcut icon">
+	<link href="/Blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/Blog/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-52658428-1']);
+		_gaq.push(['_setDomainName','github.io']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<script src="/Blog/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("382542165@qq.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+</div>
+
+<nav id="main-nav">
+<section class="aboutme">
+  <p class = "subtitle">
+    心无所恃，随遇而安
+  </p>
+</section>
+
+<ul class="main">
+    <li><a href="/Blog/">我的Blog</a></li>
+    <li><a href="/Blog/about/">关于我</a></li>
+    <li><a href="/Blog/blog/archives">全部文章</a></li>
+</ul></nav>
+<nav id="sub-nav">
+	<div class="social">
+    	
+			<a class="sina" href="http://weibo.com/1651400041" title="Sina">Sina</a>
+		
+		
+			<a class="email" href="mailto:382542165@qq.com" title="Email">Email</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="douban" href="https://www.douban.com/people/47445127" title="Douban">Douban</a>
+		
+		
+		
+    	
+    	
+			<a class="rss" href="/Blog/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-20T09:00:36+08:00" data-updated="true" itemprop="datePublished">Jun 20<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/06/20/shi-yong-vipergou-jian-iosying-yong/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/06/20/shi-yong-vipergou-jian-iosying-yong/" itemprop="url">使用VIPER构建iOS应用</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<script type="text/javascript">
+    var wumiiPermaLink = ""; //请用代码生成文章永久的链接
+    var wumiiTitle = ""; //请用代码生成文章标题
+    var wumiiTags = ""; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = []; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "http://itmonkeylife.github.io/Blog/";
+    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+</script>
+
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+
+<p><a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a></p>
+
+<p>建筑领域流行这样一句话，“我们虽然在营造建筑，但建筑也会重新塑造我们”。正如所有开发者最终领悟到的，这句话同样适用于构建软件。</p>
+
+<p>编写代码中至关重要的是，需要使每一部分容易被识别，赋有一个特定而明显的目的，并与其他部分在逻辑关系中完美契合。这就是我们所说的软件架构。好的架构不仅让一个产品成功投入使用，还可以让产品具有可维护性，并让人不断头脑清醒的对它进行维护！</p>
+
+		
+		<a href="/Blog/blog/2014/06/20/shi-yong-vipergou-jian-iosying-yong/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-18T09:23:01+08:00" data-updated="true" itemprop="datePublished">Jun 18<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/06/18/ocde-zi-lei/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/06/18/ocde-zi-lei/" itemprop="url">OC的子类</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>这篇文章跟我以往的文章有点不一样。它主要是一些思想与模式的汇集，而不是一篇指南。下面我所写的模式几乎全都来之不易，都是我犯了错之后才学到的。我并不认为自己是子类方面的权威，但我确实想把我学到的一些东西分享出来。别把本文当做权威指南，它只是一些例子的汇集。</p>
+
+<p>在被问到 OOP（面向对象编程）的时候，Alan Kay（OOP 的发明人）写到：它跟类无关，但跟消息有关。<a href="http://c2.com/cgi/wiki?AlanKayOnMessaging">^1</a>然而，很多人的关注点仍然还在类层次上。在本文中，我们会看几个我们可能会把注意力放在创建复杂的类结构上的例子，并给出更有用的替代方案。根据经验，这样会让代码更简单，更易维护。关于这个话题，在 <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>（中文版：<a href="http://www.amazon.cn/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%A9%AC%E4%B8%81/dp/B0031M9GHC/ref=pd_bxgy_b_img_y">代码整洁之道</a>）和 <a href="http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670">Code Complete</a>（中文版：<a href="http://www.amazon.cn/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8-%E5%8F%B2%E8%92%82%E5%A4%AB%E2%80%A2%E8%BF%88%E5%85%8B%E5%BA%B7%E5%A5%88%E5%B0%94/dp/B0061XKRXA/ref=pd_bxgy_b_img_z">代码大全</a>）中已经有大量讨论。推荐你阅读这两本书。</p>
+
+<h2>何时用子类</h2>
+
+<p>首先，我们讨论几种使用子类比较合适的场景。如果你要写一个自定义布局的 <code>UITableViewCell</code> ，那就创建一个子类。这同样适用于几乎每个视图。一旦你开始布局，把这块代码放入子类就更合理一些，不光代码得到了更好的封装，你也能得到一个可在工程之间重用的组件。</p>
+
+		
+		<a href="/Blog/blog/2014/06/18/ocde-zi-lei/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T11:48:19+08:00" data-updated="true" itemprop="datePublished">Jun 17<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/06/17/mvvmjie-shao/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/06/17/mvvmjie-shao/" itemprop="url">MVVM介绍</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>有时我感觉就像我不知道在做什么。虽然我知道自己的设计模式——就像任何好的编程人员那样 —— 但我太接近我在做的产品以至于不能客观地衡量我的架构决策的有效性。当队伍中来了另外一位开发者时，我意识到我们陷入困境了。</p>
+
+<p>从没听过 MVC ？有人称之为 Massive View Controller（重量级视图控制器），这就是我们那时候的感觉。我不打算介绍令人汗颜的细节，但说实在的，如果我不得不再次重来一次，我绝对会做出不同的决策。</p>
+
+<p>我会修改一个关键架构，并将其带入我从那时起就在开发的各种应用，即使用一种叫做 Model-View-ViewModel 的架构替换 Model-View-Controller。</p>
+
+<p>所以，MVVM 到底是什么？与其专注于说明 MVVM 的来历，不如让我们看一个典型的 iOS 是如何构建的，并从那里了解 MVVM：</p>
+
+<p><img src="http://img.objccn.io/issue-13/mvvm1.png" alt="Typical Model-View-Controller setup" /></p>
+
+<p>我们看到的是一个典型的 MVC 设置。Model 呈现数据，View 呈现用户界面，而 View Controller 调节它两者之间的交互。Cool！</p>
+
+<p>稍微考虑一下，虽然 View 和 View Controller 是技术上不同的组件，但它们几乎总是手牵手在一起，成对的。你什么时候看到一个 View 能够与不同 View Controller 配对？或者反过来？所以，为什么不正规化它们的连接呢？</p>
+
+		
+		<a href="/Blog/blog/2014/06/17/mvvmjie-shao/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T09:42:44+08:00" data-updated="true" itemprop="datePublished">Jun 17<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ke-pu/'>科普</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/06/17/wi-fishi-shi-yao/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/06/17/wi-fishi-shi-yao/" itemprop="url">Wi-Fi是什么</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><img class="alignnone" alt="" src="http://pic.yupoo.com/i404/D55LtSAG/66aL.png" width="1200" height="1714" /></p>
+<p>请对照上图自测。如果你是 Level 0，阅读本文前建议先搜索并查看相关资料学习 Wi-Fi 的基本概念，本文将不涉及定义或技术上的解释。</p>
+<p><span id="more-1600"></span></p>
+<h2>Wi-Fi 是 Wireless Fidelity 吗</h2>
+<p>一天和客户闲聊，我随口问了一句，Wi-Fi 是什么的缩写？客户是个美国人，他愣了一下，说自己不清楚，但推测应该是 wireless fidelity，和 hi-fi 结构相同。我惭愧地低下了头，作为设计师整天说 hi-fi lo-fi prototyping，怎么就没想到是 wireless fidelity 呢。但反省过后，我开始质疑（客户）了，Wi-Fi 真的是 wireless fidelity 的缩写吗？</p>
+<p>如果去查资料，绝大多数地方提及 Wi-Fi 时都会标注 Wi-Fi 是无线保真，也就是 wireless fidelity 的缩写。但仔细去琢磨，就会觉得还是不明白，高保真低保真都可以解释通，但无线保真是什么意思呢（写到这，因查 Google 看到七夕搭鹊桥的游戏，忍不住玩了一会儿，浪费半小时）？</p>
+<h2>Wi-Fi 的由来</h2>
+
+		
+		<a href="/Blog/blog/2014/06/17/wi-fishi-shi-yao/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T09:20:46+08:00" data-updated="true" itemprop="datePublished">Jun 17<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/rsa/'>RSA</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/06/17/rsasuan-fa-de-dan-sheng/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/06/17/rsasuan-fa-de-dan-sheng/" itemprop="url">RSA算法的诞生</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>最近为了研究某个极其无聊的问题，读了一些公钥加密的历史，意外地发现这段历史竟然非常有趣。尤其是 RSA 算法的诞生过程，被很多书写得非常励志，看得人热血澎湃。果然比起算法本身，这些背后的故事更能吸引我的兴趣。</p>
+<p>RSA 算法具体是怎么回事，我就不在这瞎说了。简介可以看 <a href="http://en.wikipedia.org/wiki/RSA_(cryptosystem)" target="_blank">Wikipedia</a>，如果想形象一点理解算法本身，<a href="http://v.youku.com/v_show/id_XNDQ0NTE3MDA0.html" target="_blank">这儿</a>有个不错的视频，可以通过它了解 RSA 的基本思想。我就直接从 RSA 这三个人说起了。参考的书籍资料列在文末。</p>
+<p><span id="more-1659"></span></p>
+<h2>RSA 背后的三个小伙</h2>
+<p>RSA 是由三个提出者 <a href="http://en.wikipedia.org/wiki/Ron_Rivest" target="_blank">Ron Rivest</a>、<a href="http://en.wikipedia.org/wiki/Adi_Shamir" target="_blank">Adi Shamir</a> 和 <a href="http://en.wikipedia.org/wiki/Len_Adleman" target="_blank">Leonard Adleman</a> 的姓氏首字母组成的。这三个人风格迥异，组成了一个技能互补的完美团队。</p>
+<p>Ron Rivest，RSA 中的 R。他在耶鲁读数学系，随后跑到斯坦福读计算机科学系研究人工智能。他所研究的课题——让机器人在没有人干预的情况下在停车场散步，在那个计算机科学系仅成立四年的年代明显太过乐观，但他依然乐此不疲。毕业后他接受 MIT 任教的工作机会。也许是因为多年积累的科研氛围，他对新技术非常兴奋，大量阅读前沿文献。与此同时，他认为迷人的理论应该与现实世界相结合，才能散发魅力，对世界有所改变，这也是他的理想。</p>
+<p>Adi Shamir，RSA 中的 S。他是以色列人，和 Rivest 一样，学数学后转计算机科学进一步深造，毕业后以访问学者的身份来到 MIT。他很聪明，学习能力超强。虽然他在数学上的造诣颇深，但起初他在算法方面的知识十分匮乏，当他接到 Rivest 关于算法高级课程讲授的邀请信时连连叫苦，教算法已经够呛了，还什么高级课程？给博士生讲的么？虽然如此，他还是硬着头皮前往 MIT，之后很快投入到学习中，整天泡在图书馆，读了一书架关于算法的书籍，最终仅用两周便掌握了所需的知识。</p>
+<p>Leonard Adleman，RSA 中的 A。自幼胸无大志，从未想过做什么数学家。读大学时受各方面影响，甚至包括<a href="http://en.wikipedia.org/wiki/Watch_Mr._Wizard" target="_blank">电视节目</a>的影响，在专业选择上犹豫不决，最终因为学数学会有大量时间做别的而选择就读数学系。毕业后在美国银行做程序员，之后想去学医，被录取了却又改变主意想研究物理，上了几堂课又觉得没意思。最后他怕挂科对找工作有影响，跑去图书馆借了本计算机科学的书，一直没还，学校就会因此扣留成绩单。辗转几次后，他最终选择读计算机科学 PhD。毕业后同样在 MIT 任教。</p>
+<p>这三人当时都非常年轻，二十多、三十出头的样子。他们的办公室距离很近，可以经常串门。于是故事就从一次 Adleman 的串门开始了。</p>
+<div class="wp-caption alignnone"><img title="有没有看到黑板上写着的 ∴ P = NP" alt="" src="http://pic.yupoo.com/i404/Dqb0HmOw/7DiuP.jpg" width="600" height="207" /><p class="wp-caption-text">自左至右：Adi Shamir, Ron Rivest, Leonard Adleman (<a href="http://www.usc.edu/dept/molecular-science/RSApics.htm" target="_blank">via</a>)</p></div>
+<h2>42次的失败</h2>
+
+		
+		<a href="/Blog/blog/2014/06/17/rsasuan-fa-de-dan-sheng/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-23T10:11:17+08:00" data-updated="true" itemprop="datePublished">May 23<span>rd</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/05/23/jiao-hu-shi-dong-hua/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/05/23/jiao-hu-shi-dong-hua/" itemprop="url">交互式动画</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>在2007年，乔布斯在第一次介绍 iPhone 的时候，iPhone 的触摸屏交互简直就像是一种魔法。最好的例子就是在他<a href="https://www.youtube.com/watch?v=t4OEsI0Sc_s&amp;t=16m9s">第一次滑动 TableView 的展示上</a>。你可以感受到当时观众的反应是多么惊讶，但是对于现在的我们来说早已习以为常。在展示的后面一部分，他特别指出当他给别人看了这个滑动例子，别人说的一句话: <a href="https://www.youtube.com/watch?v=t4OEsI0Sc_s&amp;t=16m9s">“当这个界面滑动的时候我就已经被征服了”</a>.</p>
+
+<p>是什么样的滑动能让人有‘哇哦’的效果呢？</p>
+
+<p>滑动是最完美地展示了通过触摸屏直接操作的例子。滚动视图遵从于你的手指，当你的手指离开屏幕的时，视图会自然地继续滑动直到该停止的时候停止。它用自然的方式减速，甚至在快到界限的时候也能表现出细腻的弹力效果。滑动在任何时候都保持相应，并且看上去非常真实。</p>
+
+<h2>动画的状态</h2>
+
+<p>在 iOS 中的大部分动画仍然没有按照最初 iPhone 指定的滑动标准实现。这里有很多动画一旦它们运行就不能交互（比如说解锁动画，主界面中打开文件夹和关闭文件夹的动画，和导航栏切换的动画，还有很多）。</p>
+
+<p>然而现在有一些应用给我一种始终在控制动画的体验，我们可以直接操作那些我在用的动画。当我们将这些应用和其他的应用相比较之后，我们就能感觉到明显的区别。这些应用中最优秀的有最初的 Twitter iPad app， 和现在的 Facebook Paper。但目前，使用直接操作为主并且可以中断动画的应用仍然很少。这就给我们做出更好的应用提供了机会，让我们的应用有更不同的，更高质量的体验。</p>
+
+<h2>真实交互式动画的挑战</h2>
+
+<p>当我们用 UIView 或者 CAAnimation 来实现交互式动画时会有两个大问题: 这些动画会将你在屏幕上的内容和 layer 上的实际的特定属性分离开来，并且他们直接操作这些特定属性。</p>
+
+<h3 id="modelpresentation">模型 (Model) 和显示 (Presentation) 的分离</h3>
+
+<p>Core Animation 是通过分离 layer 的模型属性和你在屏幕上看到的界面 (显示层) 的方式来设计的，这就导致我们很难去创建一个可以在任何时候能交互的动画，因为在动画时，模型和界面已经不能匹配了。这时，我们不得不通过手动的方式来同步这两个的状态，来达到改变动画的效果：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="objc"><span class="line"><span class="n">view</span><span class="p">.</span><span class="n">layer</span><span class="p">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">view</span><span class="p">.</span><span class="n">layer</span><span class="p">.</span><span class="n">presentationLayer</span><span class="p">.</span><span class="n">center</span><span class="p">;</span>
+</span><span class="line"><span class="p">[</span><span class="n">view</span><span class="p">.</span><span class="n">layer</span> <span class="nl">removeAnimationForKey:</span><span class="s">@&quot;animation&quot;</span><span class="p">];</span>
+</span><span class="line"><span class="c1">// 添加新动画</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="vs">直接控制 vs 间接控制</h3>
+
+<p><code>CAAnimation</code> 动画的更大的问题是它们是直接在 layer 上对属性进行操作的。这意味着什么呢？比如我们想指定一个 layer 从坐标为 (100, 100) 的位置运动到 (300, 300) 的位置，但是在它运动到中间的时候，我们想它停下来并且让它回到它原来的位置，事情就变得非常复杂了。如果你只是简单地删除当前的动画然后再添加一个新的，那么这个 layer 的速率就会不连续。</p>
+
+<p><img src="http://img.objccn.io/issue-12/abrupt.png" width="600" /></p>
+
+<p>然而，我们想要的是一个漂亮的，流畅地减速和加速的动画。</p>
+
+<p><img src="http://img.objccn.io/issue-12/smooth.png" width="600" /></p>
+
+<p>只有通过<em>间接</em>操作动画才能达到上面的效果，比如通过模拟力在界面上的表现。新的动画需要用 layer 的当前<em>速度矢量</em>作为参数传入来达到流畅的效果。</p>
+
+<p>看一下 UIView 中关于弹簧动画的 API </p>
+<p>animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:</p>
+<p>，你会注意到速率是个 CGFloat。所以当我们给一个移动 view 的动画在其运动的方向上加一个初始的速率时，你没法告知动画这个 view 现在的运动状态，比如我们不知道要添加的动画的方向是不是和原来的 view 的速度方向垂直。为了使其成为可能，这个速度需要用向量来表示。</p>
+
+<h2>解决方案</h2>
+
+		
+		<a href="/Blog/blog/2014/05/23/jiao-hu-shi-dong-hua/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-18T10:03:54+08:00" data-updated="true" itemprop="datePublished">May 18<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/05/18/iosdong-hua-jie-shi/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/05/18/iosdong-hua-jie-shi/" itemprop="url">iOS动画解释</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>我们写的应用程序往往都不是静态的，因为它们需要适应用户的需求以及为执行各种任务而改变状态。</p>
+
+<p>在这些状态之间转换时，清晰的揭示正在发生什么是非常重要的。而不是在页面之间跳跃，动画帮助我们解释用户从哪里来，要到哪里去。</p>
+
+<p>键盘在 view 中滑进滑出给了我们一个错觉，让我们以为它是简单的被隐藏在屏幕下方的，并且是手机很自然的一个部分。View controller 转场加强了我们的应用程序的导航结构，并且给了用户正在移向哪个方向的提示。微妙的反弹和碰撞使界面栩栩如生，并且激发出了物理的质感。要是没有这些的话，我们就只有一个没有视觉修饰的干巴巴环境了。</p>
+
+<p>动画是叙述你的应用的故事的绝佳方式，在了解动画背后的基本原理之后，设计它们会轻松很多。</p>
+
+<h2>首要任务</h2>
+
+<p>在这篇文章 (以及这个话题中其余大多数文章) 中，我们将特别地针对 Core Animation 进行探讨。虽然你将看到的很多东西也可以用更高层级的 UIKit 的方法来完成，但是 Core Animation 将会让你更好的理解正在发生什么。它以一种更明确的方式来描述动画，这对这篇文章读者以及你自己的代码的读者来说都非常有用。</p>
+
+<p>在看动画如何与我们在屏幕上看到的内容交互之前，我们需要快速浏览一下 Core Animation 的 <code>CALayer</code>，这是动画产生作用的地方。</p>
+
+<p>你大概知道 <code>UIView</code> 实例，以及 layer-backed 的 <code>NSView</code>，修改它们的 <code>layer</code> 来委托强大的 Core Graphics 框架来进行渲染。然而，你务必要理解，当把动画添加到一个 layer 时，是不直接修改它的属性的。</p>
+
+<p>取而代之，Core Animation 维护了两个平行 layer 层次结构： <em>model layer tree（模型层树）</em> 和 <em>presentation layer tree（表示层树）</em>。前者中的 layers 反映了我们能直接看到的 layers 的状态，而后者的 layers 则是动画正在表现的值的近似。</p>
+
+<blockquote>
+  <p>实际上还有所谓的第三个 layer 树，叫做 <em>rendering tree（渲染树）</em>。因为它对 Core Animation 而言是私有的，所以我们在这里不讨论它。</p>
+</blockquote>
+
+<p>考虑在 view 上增加一个渐出动画。如果在动画中的任意时刻，查看 layer 的 <code>opacity</code> 值，你是得不到与屏幕内容对应的透明度的。取而代之，你需要查看 presentation layer 以获得正确的结果。</p>
+
+<p>虽然你可能不会去直接设置 presentation layer 的属性，但是使用它的当前值来创建新的动画或者在动画发生时与 layers 交互是非常有用的。</p>
+
+<p>通过使用 <code>-[CALayer presentationLayer]</code> 和 <code>-[CALayer modelLayer]</code>，你可以在两个 layer 之间轻松切换。</p>
+
+<h2>基本动画</h2>
+
+<p>可能最常见的情况是将一个 view 的属性从一个值改变为另一个值，考虑下面这个例子：</p>
+
+<p><center><img src="http://img.objccn.io/issue-12/rocket-linear.gif" width="400px" /></center></p>
+
+<p>在这里，我们让红色小火箭的 x-position 从 <code>77.0</code> 变为 <code>455.0</code>，刚好超过它的 parent view 的边。为了填充所有路径，我们需要确定我们的火箭在任意时刻所到达的位置。这通常使用线性插值法来完成：</p>
+
+<p><center><img src="http://img.objccn.io/issue-12/lerp.png" width="135" /></center></p>
+
+<p>也就是说，对于动画给定的一个分数 <code>t</code>，火箭的 x 坐标就是起始点的 x 坐标 <code>77</code>，加上一个到终点的距离 <code>∆x = 378</code> 乘以该分数的值。</p>
+
+<p>使用 <code>CABasicAnimation</code>，我们可以如下实现这个动画：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class="objc"><span class="line"><span class="n">CABasicAnimation</span> <span class="o">*</span><span class="n">animation</span> <span class="o">=</span> <span class="p">[</span><span class="n">CABasicAnimation</span> <span class="n">animation</span><span class="p">];</span>
+</span><span class="line"><span class="n">animation</span><span class="p">.</span><span class="n">keyPath</span> <span class="o">=</span> <span class="s">@&quot;position.x&quot;</span><span class="p">;</span>
+</span><span class="line"><span class="n">animation</span><span class="p">.</span><span class="n">fromValue</span> <span class="o">=</span> <span class="err">@</span><span class="mi">77</span><span class="p">;</span>
+</span><span class="line"><span class="n">animation</span><span class="p">.</span><span class="n">toValue</span> <span class="o">=</span> <span class="err">@</span><span class="mi">455</span><span class="p">;</span>
+</span><span class="line"><span class="n">animation</span><span class="p">.</span><span class="n">duration</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="p">[</span><span class="n">rocket</span><span class="p">.</span><span class="n">layer</span> <span class="nl">addAnimation:</span><span class="n">animation</span> <span class="nl">forKey:</span><span class="s">@&quot;basic&quot;</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+		
+		<a href="/Blog/blog/2014/05/18/iosdong-hua-jie-shi/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-16T14:09:57+08:00" data-updated="true" itemprop="datePublished">May 16<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/05/16/zi-ding-yi-formatters/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/05/16/zi-ding-yi-formatters/" itemprop="url">自定义Formatters</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>我们希望有一种快速的一次性的解决方案，可以把数据格式化为一种易读的格式。Foundation 框架中的就有 <code>NSFormatter</code> 可以很好地胜任这个工作。另外，在 Mac 上，Appkit 已经内建了 <code>NSFormatter</code> 的支持。</p>
+
+<h2>内建格式器</h2>
+
+<p>Foundation 框架中的 <code>NSFormatter</code> 是一个抽象类，它有两个已经实现的子类：<code>NSNumberFormatter</code> 与 <code>NSDateFormatter</code>。现在我们先跳过这些，来实现我们自己的子类。</p>
+
+<p>如果你想了解更多的相关知识，我推荐阅读 <a href="http://nshipster.com/nsformatter/">NSHipster</a>。</p>
+
+<h2>介绍</h2>
+
+<p><code>NSFormatter</code> 除了抛出错误，其它什么事也不做。我还不知道有人想要用这个，当然如果它对你有用，就去用它吧。</p>
+
+<p>因为我们不喜欢错误，我们在此实现一个 <code>NSFormatter</code> 的子类，它可以把 <code>UIColor</code> 实例转换成可读的名字。例如，以下代码可以返回字符串“Blue”:</p>
+
+<pre><code>KPAColorFormatter *colorFormatter = [[KPAColorFormatter alloc] init];
+[colorFormatter stringForObjectValue:[UIColor blueColor]] // Blue
+</code></pre>
+
+<p><code>NSFormatter</code> 的子类化有两个方法需要实现：<code>stringForObjectValue:</code> 与 <code>getObjectValue:ForString:errorDescription:</code>。我们先开始介绍第一个方法，因为这个方法更常用。第二个方法，就我所知，经常用于 OS X 上，并且通常不是很有用，我们将稍后介绍。</p>
+
+<h2>初始化</h2>
+
+<p>首先，我们需要做些初始化的工作。由于没有事先定义好的字典可以把颜色映射至名字，这些工作将由我们来完成。为了简化，这些工作将在初始化方法中完成：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="objc"><span class="line"><span class="k">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">init</span><span class="p">;</span>
+</span><span class="line"><span class="p">{</span>
+</span><span class="line">    <span class="k">return</span> <span class="p">[</span><span class="n">self</span> <span class="nl">initWithColors:</span><span class="err">@</span><span class="p">{</span>
+</span><span class="line">        <span class="p">[</span><span class="n">UIColor</span> <span class="n">redColor</span><span class="p">]</span><span class="o">:</span> <span class="s">@&quot;Red&quot;</span><span class="p">,</span>
+</span><span class="line">        <span class="p">[</span><span class="n">UIColor</span> <span class="n">blueColor</span><span class="p">]</span><span class="o">:</span> <span class="s">@&quot;Blue&quot;</span><span class="p">,</span>
+</span><span class="line">        <span class="p">[</span><span class="n">UIColor</span> <span class="n">greenColor</span><span class="p">]</span><span class="o">:</span> <span class="s">@&quot;Green&quot;</span>
+</span><span class="line">    <span class="p">}];</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+		
+		<a href="/Blog/blog/2014/05/16/zi-ding-yi-formatters/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-14T21:31:58+08:00" data-updated="true" itemprop="datePublished">May 14<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/05/14/xiao-xi-chuan-di-ji-zhi/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/05/14/xiao-xi-chuan-di-ji-zhi/" itemprop="url">消息传递机制</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>每个应用或多或少都由一些需要相互传递消息的对象结合起来以完成任务。在这篇文章里，我们将介绍所有可用的消息传递机制，并通过例子来介绍怎样在苹果的框架里使用。我们还会选择一些最佳范例来介绍什么时候该用什么机制。</p>
+
+<p>虽然这一期的主题是关于 Foundation 框架的，但是我们会超出 Foundation 的消息传递机制 (KVO 和 通知) 来讲一讲 delegation，block 和 target-action 几种机制。</p>
+
+<p>当然，有些情况下该使用什么机制没有唯一的答案，所以应该按照自己的喜好去试试。另外大多数情况下该使用什么机制应该是很清楚的。</p>
+
+<p>本文中，我们会常常提及“接收者”和“发送者”。它们在消息传递中的意思可以通过以下的例子解释：一个 table view 是发送者，它的 delegate 就是接收者。Core Data managed object context 是它所发出的 notification 的发送者，获取 notification 的就是接收者。一个滑块 (slider) 是 action 消息的发送者，而实现这个 action （方法）的是它的接收者。任何修改一个支持 KVO 的对象的对象是发送者，这个 KVO 对象的观察者就是接收者。明白精髓了吗？</p>
+
+<h2>几种消息传递机制</h2>
+
+<p>首先我们来看看每种机制的具体特点。在这个基础上，下一节我们会画一个流程图来帮我们在具体情况下正确选择应该使用的机制。最后，我们会介绍一些苹果框架里的例子并且解释为什么在那些用例中会选择这样的机制。</p>
+
+<h3 id="kvo">KVO</h3>
+
+<p>KVO 是提供对象属性被改变时的通知的机制。KVO 的实现在 Foundation 中，很多基于 Foundation 的框架都依赖它。想要了解更多有关 KVO 的最佳实践，请阅读本期 Daniel 写的 <a href="http://objccn.io/issue-7-3">KVO 和 KVC 文章</a>。</p>
+
+<p>如果只对某个对象的值的改变感兴趣的话，就可以使用 KVO 消息传递。不过有一些前提：第一，接收者（接收对象改变的通知的对象）需要知道发送者 （值会改变的对象）；第二，接收者需要知道发送者的生命周期，因为它需要在发送者被销毁前注销观察者身份。如果这两个要去符合的话，这个消息传递机制可以一对多（多个观察者可以注册观察同一个对象的变化）</p>
+
+<p>If you plan to use KVO on Core Data objects, you have to know that things work a bit differently here. This has to do with Core Data&#8217;s faulting mechanism. Once a managed object turns into a fault, it will fire the observers on its properties although their values haven&#8217;t changed.</p>
+
+<p>如果要在 Core Data 上使用 KVO 的话，方法会有些许差别。这和 Core Data 的 faulting 机制有关。一旦一个 managed object 被 faulting 处理的话，即使它的属性没有被改变，它还是会触发相应的观察者。</p>
+
+<blockquote>
+  <span class="secondary radius label">编者注</span> 把属性值先取入缓存中，在对象需要的时候再进行一次访问，这在 Core Data 中是默认行为，这种技术称为 Faulting。这么做可以避免降低内存开销，但是如果你确定将访问结果对象的具体属性值时，可以禁用 Faults 以提高获取性能。关于这个技术更多的情况，请移步<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/Articles/cdFaultingUniquing.html">官方文档</a>
+</blockquote>
+
+<h3>通知</h3>
+
+		
+		<a href="/Blog/blog/2014/05/14/xiao-xi-chuan-di-ji-zhi/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-14T21:13:29+08:00" data-updated="true" itemprop="datePublished">May 14<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/Blog/blog/categories/ios/'>iOS</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/Blog/blog/2014/05/14/yu-yan-biao-qian/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/Blog/blog/2014/05/14/yu-yan-biao-qian/" itemprop="url">语言标签</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>当我们处理自然语言（相对于程序语言而言）的时候会遇到一项挑战，即涵义模棱两可。程序语言是被设计成为有且只有一个可能解释的语言，而人类语言可能由于模糊性和不确定性衍生出很多问题。这是由于有时候你并不想确切地告诉别人你对某事物的想法。在社交场合这完全没有问题，但是当你试图使用计算机来处理人类语言的话，就会非常痛苦。</p>
+
+<p>词法标识（token）就是一个简单的例子。程序语言的词法分析对于标识表示什么，它是什么类型（语句分隔符，标识符，保留关键字等等）是什么有着明确的规则。而自然语言则远不能如此清晰可辩。<em>can’t</em> 是一个还是两个标识？并且根据你做出的判断，<em>cannot</em> 或者 <em>can not</em> 这两个应该是相同意思的词又各是几个标识呢？很多复合词都可以写成一个词（比如：<em>bookshelf</em>），或者两个词（比如：<em>lawn mower</em>），甚至还可以用连字符来连接（比如：<em>life-cycle</em>）。有些字符 （比如说连字符或者右肩单撇号），可以有很多种解释，而如何选择正确字符往往取决于上下文语言环境（撇号在一个单词的最后是表示所有格符号还是后单引号？）</p>
+
+<p>句子的情况同样不怎么好：如果简单认为句号是用来结束一个句子的话，在我们使用缩写或是序数的时候就悲剧了。虽然通常情况下，我们是可以解决这个问题的，但是对有些句子而言，除非将整个段落彻底分析，否则无法真正确定这些句子的意思。我们人类甚至也无法有意识地考虑这些问题。</p>
+
+<p>不过我们希望能够处理人类语言，因为在跟软件交流的时候，使用人类语言对用户更加友好。我们更愿意直接告诉计算机要做什么，让计算机为我们分析报纸文章，并对我们感兴趣的新闻做个总结，而不是通过敲击键盘或者点击小小的按钮（或者在小小的虚拟键盘上打字）来让计算机为我们做这些事。其中有些还在我们的能力范围之外（至少在苹果为我们提供与 Siri 交互的  API 之前）。但是有些已经成为可能，那就是 <code>NSLinguisticTagger</code>。</p>
+
+<p><code>NSLinguisticTagger</code> 是 Foundation 框架中命名极为不当的类之一，这是因为它远远不止是一个小小的词性 tagger，而是集词法分析，分词器，命名实体识别及词性标注为一体的类。换句话说，它几乎可以满足你处理某些计算机语言处理的全部要求。</p>
+
+<p>为了展示 <code>NSLinguisticTagger</code> 类的用法，我们会开发一个灵活的工具用来搜索。我们有一个充满了文本（比如新闻，电邮，或者其他的任意文本）的集合，然后我们输入一个单词，这个单词将返回所有包含这个单词的句子。我们会忽略功能词（比如 <em>the</em>，<em>of</em> 或者 <em>and</em>），因为它们在这个语言环境中太过于常见，没有什么用处。我们目前要实现的是第一步：从一个单独文件中提取相关单词。由此可以迅速地扩展到提供完整功能。</p>
+
+<p><a href="https://github.com/objcio/issue-7-linguistic-tagging">GitHub</a> 上有源代码和样本文本。这是《卫报》上一篇关于中英贸易的文章。当用软件分析这份文本时，你会发现，它并不是总是运行良好，不过，出现运行故障完全正常：人类语言和任何正式语言都不同，人类语言凌乱复杂，无法简单划归到整齐划一的规则系统。很多理论问题（哪怕就像词性一样基础的问题）在某种程度上是无法解决的，这是由于我们仍然对如何才能最好地描述语言还所知甚少。比如说，词的分类是以拉丁语为依据的，但这并不意味着就必定适合英语。它们充其量只是大概近似而已。不过从很多实际的目的来看，这样就已经足够了，不需要让人怎么担心了。</p>
+
+		
+		<a href="/Blog/blog/2014/05/14/yu-yan-biao-qian/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/Blog/" class="prev">Prev</a>
+    
+    
+        <a href="/Blog/blog/page/3/" class="next">Next</a>
+    
+    <div class="center"><a href="/Blog/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Rick
+
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+		</div>
+	</div>
+</body>
+</html>
